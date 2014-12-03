@@ -15,7 +15,7 @@ public class Bebedor
     }
     
     /**
-     * tomar una copa
+     * tomar una copa sin sobrepasar limite
      */
     public void beberCopa(Cubata copa)
     {
@@ -30,6 +30,9 @@ public class Bebedor
     }
     
     
+    /**
+     * preguntas
+     */
     public  void  contesta (String pregunta)
     {
           int letras = pregunta.length();
@@ -44,7 +47,7 @@ public class Bebedor
               }
           }
           else{
-               pregunta.toUpperCase();
+              System.out.println(pregunta.toUpperCase()); 
           }
              
     }

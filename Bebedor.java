@@ -15,7 +15,7 @@ public class Bebedor
     }
     
     /**
-     * tomar una copa sin sobrepasar limite
+     * tomar una copa 
      */
     public void beberCopa(Cubata copa)
     {
@@ -31,12 +31,13 @@ public class Bebedor
     
     
     /**
-     * preguntas
+     * preguntas y respuestas en relación a la cantidad de alcohol en sangre 
      */
     public  void  contesta (String pregunta)
     {
           int letras = pregunta.length();
           int par = letras % 2;
+          
           if (drinkLevel < (maximo +1)){
               if(par == 0){
                 System.out.println("si");
@@ -47,7 +48,11 @@ public class Bebedor
               }
           }
           else{
-              System.out.println(pregunta.toUpperCase()); 
+              if(drinkLevel > (maximo + 1 ) || pregunta.contains(name))
+              {
+                  System.out.println(pregunta.toUpperCase());
+              }
+                           
           }
              
     }

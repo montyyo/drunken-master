@@ -19,7 +19,7 @@ public class Bebedor
      */
     public void beberCopa(Cubata copa)
     {
-      if (drinkLevel < maximo){
+      if (drinkLevel < (maximo +1)){
           int nivel = copa.getAlcohol();
           drinkLevel = drinkLevel + nivel;
       }
@@ -28,4 +28,26 @@ public class Bebedor
          System.out.println("LLAMAME UN TAXI ANDRES");  
       }
     }
+    
+    
+    public  void  contesta (String pregunta)
+    {
+          int letras = pregunta.length();
+          int par = letras % 2;
+          if (drinkLevel < (maximo +1)){
+              if(par == 0){
+                System.out.println("si");
+              }
+              else
+              {
+                System.out.println("no");
+              }
+          }
+          else{
+               pregunta.toUpperCase();
+          }
+             
+    }
+          
+    
 }

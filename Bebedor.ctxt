@@ -4,4 +4,6 @@ comment0.target=Bebedor(java.lang.String,\ int)
 comment1.params=copa
 comment1.target=void\ beberCopa(Cubata)
 comment1.text=\r\n\ tomar\ una\ copa\r\n
-numComments=2
+comment2.params=pregunta
+comment2.target=void\ contesta(java.lang.String)
+numComments=3

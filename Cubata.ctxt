@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nameAlcohol\ cantAlcohol
+comment0.target=Cubata(java.lang.String,\ int)
+comment0.text=\r\n\ constructor\r\n
+comment1.params=
+comment1.target=int\ getAlcohol()
+comment1.text=\r\n\ nivel\ de\ alcohol\r\n
+numComments=2

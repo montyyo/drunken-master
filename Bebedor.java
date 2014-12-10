@@ -102,6 +102,8 @@ public class Bebedor
             }
             else{
                 System.out.println("no tienes dinero para un taxi");
+                sacarDinero(taxi,taxi);
+                
             }
         }
         

@@ -70,10 +70,10 @@ public class Bebedor
     /**
      * sacar dinero para taxi
      */
-    public void sacarDinero(boolean saldo, int dinero, int cantidadRetirar)
+    public void sacarDinero( int dineroCuenta, int cantidadRetirar)
     {
         
-        if(saldo == true && cantidadRetirar >0 && dinero >= cantidadRetirar){
+        if( dineroCuenta >= cantidadRetirar && cantidadRetirar > 0){
             System.out.println("su saldo actual es positivo procedemos a retirar " + cantidadRetirar);
             dinero = dinero + cantidadRetirar;
         }

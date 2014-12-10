@@ -1,17 +1,25 @@
 
 public class Bebedor
 {
-    //nombre
+    //nombre bebedor
     private String name;
     //nivel alcohol en sangre
     private int drinkLevel;
    //limite
     private int maximo;
-    public Bebedor(String name, int maximo)
+    //dinero
+    private int dinero;
+    public Bebedor(String name, int maximo, int dinero)
     {
         this.name = name;
         drinkLevel = 0;
         this.maximo = maximo;
+        this.dinero = dinero;
+    }
+    
+    public int getLevel()
+    {
+        return drinkLevel;
     }
     
     /**
@@ -22,14 +30,14 @@ public class Bebedor
       if (drinkLevel < (maximo +1)){
           int nivel = copa.getAlcohol();
           drinkLevel = drinkLevel + nivel;
+          dinero = dinero - copa.getPrecio();
       }
       else
       {
          System.out.println("LLAMAME UN TAXI ANDRES");  
       }
     }
-    
-    
+         
     /**
      * preguntas y respuestas en relación a la cantidad de alcohol en sangre 
      */
@@ -56,6 +64,30 @@ public class Bebedor
           }
              
     }
-          
+      
+
+    /**
+     * metodo que si supera el limite de alcohol en sangre se llama a un taxi y si no lo supera el camarero le permite conducir
+     */
+    public void llamaUnTaxi( int precioTaxi)
+    {
+        
+        int taxi = precioTaxi;
+        if (drinkLevel < (maximo + 1 ) ){
+        
+            System.out.println(" tu nivel de alcohol en sangre es menor que el maximo para conducir, tomo las llaves");
+        }
+        else
+        {
+            if(drinkLevel > maximo && dinero >= taxi){
+                System.out.println(" NO PUEDES CONDUCIR TE LLAMO UN TAXI");
+            
+            }
+            else{
+                System.out.println("no tienes dinero para un taxi");
+            }
+        }
+        
     
+    }
 }

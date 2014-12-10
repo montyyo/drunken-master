@@ -9,6 +9,8 @@ public class Bebedor
     private int maximo;
     //dinero
     private int dinero;
+    
+    
     public Bebedor(String name, int maximo, int dinero)
     {
         this.name = name;
@@ -65,6 +67,21 @@ public class Bebedor
              
     }
       
+    /**
+     * sacar dinero para taxi
+     */
+    public void sacarDinero(boolean saldo, int dinero, int cantidadRetirar)
+    {
+        
+        if(saldo == true && cantidadRetirar >0 && dinero >= cantidadRetirar){
+            System.out.println("su saldo actual es positivo procedemos a retirar " + cantidadRetirar);
+            dinero = dinero + cantidadRetirar;
+        }
+        else
+        {
+            System.out.println("saldo en cuenta insuficiente");
+        }
+    }
 
     /**
      * metodo que si supera el limite de alcohol en sangre se llama a un taxi y si no lo supera el camarero le permite conducir
